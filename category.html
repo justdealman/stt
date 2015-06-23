@@ -195,146 +195,218 @@
 				<input type="text" placeholder="Искать технику">
 			</div>
 		</header>
-		<section class="introduction">
-			<h1>Вся спецтехника Барнаула в аренду</h1>
-			<p>Теперь не надо мучиться и искать интересующую технику у разных операторов, вся спецтехника есть на этом сайте. Достаточно выбрать нужную категорию, найти подходящую технику и сделать заказ по телефону или через сайт. А можно заказать подбор техники</p>
-			<button>Подбор спецтехники</button>
-		</section>
-		<section class="catalog">
-			<h3>Каталог спецтехники</h3>
-			<div class="information">
-				<div>
-					<p>В нашем каталоге представлены все возможные категории специализированной техники для любых нужд, начиная со строительства и заканчивая банальным переездом</p>
-				</div>
+		<section class="title">
+			<h1>Автовышки в аренду</h1>
+			<ul class="breadcrumbs">
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Спецтехника</a></li>
+			</ul>
+			<div class="filter">
 				<ul>
 					<li>
-						<h5>22</h5>
-						<p>вида техники</p>
+						<span>Стоимость аренды</span>
+						<h5>
+							<span>до 1 500 руб<em class="remove"></em></span>
+						</h5>
+						<div data-min="500" data-max="10000" data-from="500" data-to="3000" data-step="50">
+							<div>
+								<div class="range-slider">
+									<h6 class="min"></h6>
+									<h6 class="max"></h6>
+									<div></div>
+								</div>
+								<p>
+									<span>от</span>
+									<input type="text" class="from">
+									<span>до</span>
+									<input type="text" class="to">
+									<span>руб.</span>
+								</p>
+ 							</div>
+						</div>
 					</li>
 					<li>
-						<h5>2 540</h5>
-						<p>единиц техники</p>
+						<span>Высота подъема</span>
+						<div data-min="10" data-max="200" data-from="10" data-to="100" data-step="1">
+							<div>
+								<div class="range-slider">
+									<h6 class="min"></h6>
+									<h6 class="max"></h6>
+									<div></div>
+								</div>
+								<p>
+									<span>от</span>
+									<input type="text" class="from">
+									<span>до</span>
+									<input type="text" class="to">
+									<span>м</span>
+								</p>
+ 							</div>
+						</div>
+					</li>
+					<li>
+						<span>Грузоподъемность</span>
+						<div data-min="150" data-max="250" data-from="150" data-to="190" data-step="1">
+							<div>
+								<div class="range-slider">
+									<h6 class="min"></h6>
+									<h6 class="max"></h6>
+									<div></div>
+								</div>
+								<p>
+									<span>от</span>
+									<input type="text" class="from">
+									<span>до</span>
+									<input type="text" class="to">
+									<span>кг</span>
+								</p>
+ 							</div>
+						</div>
 					</li>
 				</ul>
+				<h6 class="clear"><span>Сбросить фильтры</span></h6>
 			</div>
+			<div class="sort">
+				<div class="order">
+					<h6>Сортировать:</h6>
+					<ul>
+						<li>Цена</li>
+						<li>Название</li>
+						<li>Вылет стрелы</li>
+						<li>Дата</li>
+					</ul>
+				</div>
+				<div class="view">
+					<h6>Вид:</h6>
+					<ul>
+						<li class="grid-view"></li>
+						<li class="list-view"></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="catalog">
 			<div class="grid">
 				<ul>
 					<li data-card="1">
 						<div class="type">
-							<div>
-								<img src="./img/type1_icon.png" width="60" height="120" alt="">
-							</div>
-							<p>105</p>
+							<p>21 м</p>
 						</div>
 						<div class="photo">
-							<img src="./pic/grid1.jpg" width="300" height="225" alt="">
+							<img src="./pic/category1.jpg" width="300" height="225" alt="">
 						</div>
-						<h4>Автовышка в аренду</h4>
-						<h6>от 1 200 руб/час</h6>
+						<h4>Kia Bongo</h4>
+						<h6>1 500 руб/час</h6>
 					</li>
 					<li data-card="1">
 						<div class="type">
-							<div>
-								<img src="./img/type2_icon.png" width="60" height="120" alt="">
-							</div>
-							<p>1 253</p>
+							<p>27 м</p>
 						</div>
 						<div class="photo">
-							<img src="./pic/grid2.jpg" width="300" height="225" alt="">
+							<img src="./pic/category2.jpg" width="300" height="225" alt="">
 						</div>
-						<h4>Автокран в аренду</h4>
-						<h6>от 2 500 руб/час</h6>
+						<h4>Nissan Diesel UD</h4>
+						<h6>1 000 руб/час</h6>
 					</li>
 					<li data-card="1">
 						<div class="type">
-							<div>
-								<img src="./img/type3_icon.png" width="60" height="120" alt="">
-							</div>
-							<p>312</p>
+							<p>18 м</p>
 						</div>
 						<div class="photo">
-							<img src="./pic/grid3.jpg" width="300" height="225" alt="">
+							<img src="./pic/category3.jpg" width="300" height="225" alt="">
 						</div>
-						<h4>Бензовоз в аренду</h4>
-						<h6>от 2 000 руб/час</h6>
+						<h4>ЗИЛ 433362</h4>
+						<h6>900 руб/час</h6>
 					</li>
 					<li data-card="1">
 						<div class="type">
-							<div>
-								<img src="./img/type4_icon.png" width="60" height="120" alt="">
-							</div>
-							<p>312</p>
+							<p>22 м</p>
 						</div>
 						<div class="photo">
-							<img src="./pic/grid4.jpg" width="300" height="225" alt="">
+							<img src="./pic/category4.jpg" width="300" height="225" alt="">
 						</div>
-						<h4>Бульдозер в аренду</h4>
-						<h6>от 2 100 руб/час</h6>
+						<h4>Зил АГП-22.04</h4>
+						<h6>1 000 руб/час</h6>
 					</li>
 					<li data-card="1">
 						<div class="type">
-							<div>
-								<img src="./img/type5_icon.png" width="60" height="120" alt="">
-							</div>
-							<p>62</p>
+							<p>12 м</p>
 						</div>
 						<div class="photo">
-							<img src="./pic/grid5.jpg" width="300" height="225" alt="">
+							<img src="./pic/category5.jpg" width="300" height="225" alt="">
 						</div>
-						<h4>Буроям в аренду</h4>
-						<h6>от 1 300 руб/час</h6>
+						<h4>Tadano AT105</h4>
+						<h6>900 руб/час</h6>
 					</li>
 					<li data-card="1">
 						<div class="type">
-							<div>
-								<img src="./img/type6_icon.png" width="60" height="120" alt="">
-							</div>
-							<p>1 253</p>
+							<p>21 м</p>
 						</div>
 						<div class="photo">
-							<img src="./pic/grid6.jpg" width="300" height="225" alt="">
+							<img src="./pic/category6.jpg" width="300" height="225" alt="">
 						</div>
-						<h4>Гидромолот в аренду</h4>
-						<h6>от 2 000 руб/час</h6>
+						<h4>HINO RANGER 1116</h4>
+						<h6>900 руб/час</h6>
 					</li>
 					<li data-card="1">
 						<div class="type">
-							<div>
-								<img src="./img/type7_icon.png" width="60" height="120" alt="">
-							</div>
-							<p>142</p>
+							<p>21 м</p>
 						</div>
 						<div class="photo">
-							<img src="./pic/grid7.jpg" width="300" height="225" alt="">
+							<img src="./pic/category1.jpg" width="300" height="225" alt="">
 						</div>
-						<h4>Миксер в аренду</h4>
-						<h6>от 1 300 руб/час</h6>
+						<h4>Kia Bongo</h4>
+						<h6>1 500 руб/час</h6>
 					</li>
 					<li data-card="1">
 						<div class="type">
-							<div>
-								<img src="./img/type8_icon.png" width="60" height="120" alt="">
-							</div>
-							<p>98</p>
+							<p>27 м</p>
 						</div>
 						<div class="photo">
-							<img src="./pic/grid8.jpg" width="300" height="225" alt="">
+							<img src="./pic/category2.jpg" width="300" height="225" alt="">
 						</div>
-						<h4>Мини-погрузчик<br> в аренду</h4>
-						<h6>от 1 300 руб/час</h6>
+						<h4>Nissan Diesel UD</h4>
+						<h6>1 000 руб/час</h6>
 					</li>
 					<li data-card="1">
 						<div class="type">
-							<div>
-								<img src="./img/type9_icon.png" width="60" height="120" alt="">
-							</div>
-							<p>231</p>
+							<p>18 м</p>
 						</div>
 						<div class="photo">
-							<img src="./pic/grid9.jpg" width="300" height="225" alt="">
+							<img src="./pic/category3.jpg" width="300" height="225" alt="">
 						</div>
-						<h4>Самосвал в аренду</h4>
-						<h6>от 800 руб/час</h6>
+						<h4>ЗИЛ 433362</h4>
+						<h6>900 руб/час</h6>
+					</li>
+					<li data-card="1">
+						<div class="type">
+							<p>22 м</p>
+						</div>
+						<div class="photo">
+							<img src="./pic/category4.jpg" width="300" height="225" alt="">
+						</div>
+						<h4>Зил АГП-22.04</h4>
+						<h6>1 000 руб/час</h6>
+					</li>
+					<li data-card="1">
+						<div class="type">
+							<p>12 м</p>
+						</div>
+						<div class="photo">
+							<img src="./pic/category5.jpg" width="300" height="225" alt="">
+						</div>
+						<h4>Tadano AT105</h4>
+						<h6>900 руб/час</h6>
+					</li>
+					<li data-card="1">
+						<div class="type">
+							<p>21 м</p>
+						</div>
+						<div class="photo">
+							<img src="./pic/category6.jpg" width="300" height="225" alt="">
+						</div>
+						<h4>HINO RANGER 1116</h4>
+						<h6>900 руб/час</h6>
 					</li>
 				</ul>
 				<div class="card" data-element="1">
@@ -368,72 +440,15 @@
 						</div>
 					</div>
 				</div>
-				<button>Показать все категории</button>
+				<button>Показать еще</button>
 			</div>
 		</section>
 		<section class="steps">
 			<div class="information">
 				<div>
-					<h3>Заказать спецтехнику в аренду легко</h3>
+					<h3>Заказать автовышку в аренду легко </h3>
 					<p>Наши специалисты активно и, что самое важное, успешно работают над расширением каталога спецтехники в Барнауле, чтобы пользователям не было необходимости искать необходимую технику где-то еще. Наша основная миссия — обеспечить посетителя информацией в нужном объеме и качестве и дать ему возможность достичь той цели, которую он преследовал, зайдя на наш сайт.</p>
 				</div>
-			</div>
-			<ul>
-				<li>
-					<div>
-						<img src="./img/step1_icon.png" width="32" height="32" alt="">
-						<h5>Быстрый и удобный поиск техники</h5>
-						<p>Всего несколько кликов отделяют Вас от нужной Вам техники: будь то обзор каталога, либо через поле поиска по конкретной модели или категории</p>
-					</div>
-				</li>
-				<li>
-					<div>
-						<img src="./img/step2_icon.png" width="32" height="30" alt="">
-						<h5>Механизмы фильтрации и сортировки техники</h5>
-						<p>Мы знаем, по каким критериям отбирают технику в рамках категории, и даем пользователю инструменты для поиска вариантов, максимально соответвующих его требованиям</p>
-					</div>
-				</li>
-				<li>
-					<div>
-						<img src="./img/step3_icon.png" width="32" height="32" alt="">
-						<h5>Простая форма заявки</h5>
-						<p>По своему усмотрению, пользователь может заполнить, как заявку из двух полей, так и более подробную<br> в случае необходимости</p>
-					</div>
-				</li>
-				<li class="button">
-					<button>Перейти в каталог</button>
-				</li>
-			</ul>
-		</section>
-		<section class="clients">
-			<div>
-				<h3>Поэтому нам доверяют</h3>
-				<ul class="carousel">
-					<li>
-						<a href="#"><img src="./pic/client1.png" width="160" height="44" alt=""></a>
-					</li>
-					<li>
-						<a href="#"><img src="./pic/client2.png" width="148" height="30" alt=""></a>
-					</li>
-					<li>
-						<a href="#"><img src="./pic/client3.png" width="120" height="52" alt=""></a>
-					</li>
-					<li>
-						<a href="#"><img src="./pic/client4.png" width="120" height="75" alt=""></a>
-					</li>
-					<li>
-						<a href="#"><img src="./pic/client1.png" width="160" height="44" alt=""></a>
-					</li>
-					<li>
-						<a href="#"><img src="./pic/client2.png" width="148" height="30" alt=""></a>
-					</li>
-					<li>
-						<a href="#"><img src="./pic/client3.png" width="120" height="52" alt=""></a>
-					</li>
-					<li>
-						<a href="#"><img src="./pic/client4.png" width="120" height="75" alt=""></a>
-					</li>
-				</ul>
 			</div>
 		</section>
 		<div class="clear"></div>
@@ -483,6 +498,7 @@
 		</div>
 	</footer>
 	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery-ui.js"></script>
 	<script src="./js/jcarousel.js"></script>
 	<script src="./js/dynamic.js"></script>
 </body>

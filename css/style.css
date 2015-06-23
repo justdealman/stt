@@ -11,6 +11,15 @@
 }
 @font-face {
     font-family:'Roboto';
+    src:url('../fonts/robotoi.eot');
+    src:url('../fonts/robotoi.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/robotoi.woff') format('woff'),
+        url('../fonts/robotoi.ttf') format('truetype');
+    font-weight:normal;
+    font-style:italic;
+}
+@font-face {
+    font-family:'Roboto';
     src:url('../fonts/robotom.eot');
     src:url('../fonts/robotom.eot?#iefix') format('embedded-opentype'),
         url('../fonts/robotom.woff') format('woff'),
@@ -811,7 +820,7 @@ header .search.focused {
 
 /* Footer */
 
-.clear {
+div.clear {
 	clear:both;
 	overflow:hidden;
 }
@@ -1093,6 +1102,19 @@ footer h5 span {
 	padding:0;
 	margin:0 0 -1px;
 }
+.grid .card .information .phone p span {
+	color:#00ae5d;
+	text-decoration:none;
+	cursor:pointer;
+	transition:color 0.1s ease-in-out;
+	-webkit-transition:color 0.1s ease-in-out;
+	-moz-transition:color 0.1s ease-in-out;
+	-o-transition:color 0.1s ease-in-out;
+}
+.grid .card .information .phone p span:hover {
+	color:#e88e00;
+	text-decoration:none;
+}
 .grid .card .information .more {
 	padding:23px 0 0;
 	margin:16px 0 10px;
@@ -1130,4 +1152,614 @@ footer h5 span {
 	.grid .card .information {
 		margin:-9px 160px 0 0;
 	}
+}
+
+.title {
+	position:relative;
+	z-index:20;
+	width:940px;
+	padding:38px 20px 10px;
+	margin:0 auto -25px;
+}
+.title h1 {
+	position:relative;
+	font-size:40px;
+	line-height:50px;
+	padding:0;
+	margin:0 0 5px 40px;
+}
+.title h1:before {
+	content:'';
+	position:absolute;
+	left:-40px;
+	top:27px;
+	width:20px;
+	height:3px;
+	background:#00ae5d;
+}
+.title .breadcrumbs {
+	clear:both;
+	overflow:hidden;
+	margin:0 0 0 40px;
+}
+.title .breadcrumbs li {
+	float:left;
+	font-size:12px;
+	line-height:18px;
+	font-style:italic;
+	white-space:nowrap;
+	padding:0 24px 0 0;
+	margin:0 8px 5px 0;
+	background:url('../img/breadcumbs_arrow.png') no-repeat right 8px;
+}
+.title .breadcrumbs li a {
+	color:#999999;
+}
+.title .breadcrumbs li a:hover {
+	color:#e88e00;
+}
+.title .filter {
+	position:relative;
+	padding:14px 40px 14px;
+	margin:21px 0 5px;
+	border-top:1px solid #d0d0d0;
+	border-bottom:1px solid #d0d0d0;
+}
+.title .filter .clear {
+	position:absolute;
+	right:40px;
+	bottom:17px;
+	font-size:14px;
+	line-height:22px;
+	font-weight:normal;
+	padding:0;
+	margin:0;
+}
+.title .filter .clear span {
+	color:#999999;
+	cursor:pointer;
+}
+.title .filter .clear span:hover {
+	color:#e88e00;
+}
+.title .filter > ul {
+	margin:0;
+}
+.title .filter > ul > li {
+	position:relative;
+	display:inline-block;
+	vertical-align:top;
+	margin:0 0 0 33px;
+}
+.title .filter > ul > li:first-child {
+	margin-left:0;
+}
+.title .filter > ul > li > span {
+	position:relative;
+	z-index:2;
+	color:#00ae5d;
+	font-size:14px;
+	line-height:22px;
+	font-weight:bold;
+	text-transform:uppercase;
+	cursor:pointer;
+	padding:0 15px 0 0;
+}
+.title .filter > ul > li > span:after {
+	content:'';
+	position:absolute;
+	right:3px;
+	top:8px;
+	width:6px;
+	height:4px;
+	background:url('../img/arrow_icon.png') no-repeat left -8px;
+}
+.title .filter > ul > li.active {
+	z-index:5;
+}
+.title .filter > ul > li.active > span {
+	color:#e88e00;
+}
+.title .filter > ul > li.active > span:after {
+	background-position:0 -12px;
+}
+.title .filter > ul > li  h5 {
+	position:relative;
+	font-size:14px;
+	line-height:20px;
+	padding:0;
+	margin:9px 0 -2px;
+}
+.title .filter > ul > li  h5 span {
+	position:relative;
+	display:inline-block;
+	vertical-align:top;
+	white-space:nowrap;
+	padding:0 17px 0 0;
+	margin:0 0 6px;
+}
+.title .filter > ul > li  h5 span em.remove {
+	position:absolute;
+	right:0;
+	top:4px;
+	width:12px;
+	height:12px;
+	cursor:pointer;
+	background:url('../img/remove_icon.png') no-repeat left top;
+}
+.title .filter > ul > li > div {
+	display:none;
+	position:absolute;
+	left:-30px;
+	top:-14px;
+	width:300px;
+	padding:50px 0 0;
+	background:#ffffff;
+	-webkit-box-shadow:0 1px 5px rgba(0,0,0,0.35);
+	-moz-box-shadow:0 1px 5px rgba(0,0,0,0.35);
+	box-shadow:0 1px 5px rgba(0,0,0,0.35);
+}
+.title .filter > ul > li.active > div {
+	display:block;
+}
+.title .filter > ul > li > div > div {
+	padding:16px 20px 20px 20px;
+	border-top:1px solid #d0d0d0;
+}
+.title .filter > ul > li > div > div p {
+	height:32px;
+	font-size:14px;
+	line-height:22px;
+	margin:30px 0 10px;
+}
+.title .filter > ul > li > div > div p span {
+	float:left;
+	font-size:14px;
+	line-height:22px;
+	vertical-align:top;
+	padding:5px 10px;
+	margin:0;
+}
+.title .filter > ul > li > div > div p input {
+	float:left;
+	width:70px;
+	font-size:14px;
+	padding:5px 14px 6px;
+	border:1px solid #aaaaaa;
+}
+.title .filter > ul > li > div > div .range-slider {
+	position:relative;
+	width:240px;
+	height:8px;
+	padding:21px 0 0;
+	margin:0 auto 10px;
+}
+.title .filter > ul > li > div > div .range-slider h6 {
+	position:absolute;
+	top:0;
+	color:#999999;
+	font-size:12px;
+	line-height:16px;
+	font-weight:normal;
+	padding:0;
+	margin:0;
+}
+.title .filter > ul > li > div > div .range-slider h6.min {
+	left:0;
+}
+.title .filter > ul > li > div > div .range-slider h6.max {
+	right:0;
+}
+.title .filter > ul > li > div > div .range-slider > div {
+	position:relative;
+	width:240px;
+	height:8px;
+	-webkit-box-shadow:inset 1px 1px 0 #aaaaaa, inset -1px -1px 0 #aaaaaa;
+	-moz-box-shadow:inset 1px 1px 0 #aaaaaa, inset -1px -1px 0 #aaaaaa;
+	box-shadow:inset 1px 1px 0 #aaaaaa, inset -1px -1px 0 #aaaaaa;
+}
+.title .filter > ul > li > div > div .range-slider > div:before, .title .filter > ul > li > div > div .range-slider > div:after {
+	content:'';
+	position:absolute;
+	top:-5px;
+	width:1px;
+	height:5px;
+	background:#aaaaaa;
+}
+.title .filter > ul > li > div > div .range-slider > div:before {
+	left:0;
+}
+.title .filter > ul > li > div > div .range-slider > div:after {
+	right:0;
+}
+.title .filter > ul > li > div > div .range-slider .ui-slider-range {
+	position:absolute;
+	top:0;
+	display:block;
+	height:8px;
+	background:#7fd6ae;
+}
+.title .filter > ul > li > div > div .range-slider .ui-slider-handle {
+	position:absolute;
+	display:block;
+	top:-6px;
+	z-index:5;
+	width:10px;
+	height:24px;
+	cursor:pointer;
+	margin:0 0 0 -9px;
+	background:url('../img/slider_hangle.png') no-repeat left top;
+}
+.title .filter > ul > li > div > div .range-slider .ui-slider-handle:last-child {
+	margin:0 0 0 -1px;
+	background-position:-10px top;
+}
+.title .sort {
+	clear:both;
+	overflow:hidden;
+	padding:0 40px;
+	margin:30px 0 5px;
+}
+.title .sort h6 {
+	float:left;
+	font-size:14px;
+	line-height:22px;
+	font-weight:normal;
+	padding:0;
+	margin:4px 10px 6px 0;
+}
+.title .sort .order {
+	float:left;
+}
+.title .sort .order ul {
+	float:left;
+	margin:0 0 0 -1px;
+}
+.title .sort .order ul li {
+	float:left;
+}
+.title .sort .order ul li {
+	position:relative;
+	color:#999999;
+	font-size:14px;
+	line-height:22px;
+	cursor:pointer;
+	padding:3px 9px 5px;
+	border:1px solid transparent;
+}
+.title .sort .order ul li:after {
+	display:none;
+	content:'';
+	position:absolute;
+	right:14px;
+	top:9px;
+	width:11px;
+	height:10px;
+}
+.title .sort .order ul li.active:after {
+	display:block;
+}
+.title .sort .order ul li.down:after {
+	background:url('../img/sort_order.png') no-repeat left -20px;
+}
+.title .sort .order ul li.down:hover:after {
+	background-position:0 -30px;
+}
+.title .sort .order ul li.up:after {
+	background:url('../img/sort_order.png') no-repeat left top;
+}
+.title .sort .order ul li.up:hover:after {
+	background-position:0 -10px;
+}
+.title .sort .order ul li:hover {
+	color:#00ae5d !important;
+}
+.title .sort .order ul li.active {
+	color:#3d3d3d;
+	padding:3px 31px 5px 13px;
+	border:1px solid #aaaaaa;
+}
+.title .sort .view {
+	float:right;
+}
+.title .sort .view ul {
+	float:left;
+	margin:0 0 0 7px;
+}
+.title .sort .view ul li {
+	position:relative;
+	float:left;
+	display:block;
+	width:30px;
+	height:30px;
+	cursor:pointer;
+	margin:0 0 0 3px;
+	border:1px solid transparent;
+}
+.title .sort .view ul li:first-child {
+	margin-left:0;
+}
+.title .sort .view ul li.grid-view {
+	background:url('../img/grid_icon.png') no-repeat left top;
+}
+.title .sort .view ul li.list-view {
+	background:url('../img/list_icon.png') no-repeat left top;
+}
+.title .sort .view ul li.active {
+	background-position:0 -30px;
+	border:1px solid #aaaaaa;
+}
+.title .sort .view ul li:hover {
+	background-position:0 -60px;
+}
+
+@media screen and (min-width: 1300px) {
+	.title {
+		width:1260px;
+	}
+}
+
+.grid .list1 {
+	text-align:left;
+	margin:0;
+}
+.grid .list1 > div {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	cursor:pointer;
+	margin:0 0 20px;
+	background:#ffffff;
+	transition:box-shadow 0.1s ease-in-out;
+	-webkit-transition:box-shadow 0.1s ease-in-out;
+	-moz-transition:box-shadow 0.1s ease-in-out;
+	-o-transition:box-shadow 0.1s ease-in-out;
+}
+.grid .list1 > div:hover {
+	-webkit-box-shadow:0 1px 5px rgba(0,0,0,0.35);
+	-moz-box-shadow:0 1px 5px rgba(0,0,0,0.35);
+	box-shadow:0 1px 5px rgba(0,0,0,0.35);
+}
+.grid .list1 > div .photo {
+	overflow:hidden;
+	position:relative;
+	float:left;
+	width:300px;
+	height:225px;
+}
+.grid .list1 > div .photo img {
+	position:absolute;
+	left:0;
+	top:0;
+	min-width:300px;
+	min-height:225px;
+}
+.grid .list1 > div .type {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:5;
+	width:60px;
+}
+.grid .list1 > div .type > div {
+	overflow:hidden;
+	position:relative;
+	width:60px;
+	height:60px;
+	background:rgb(0,0,0);
+	background:rgba(0,0,0,0.7);
+}
+.grid .list1 > div .type > div img {
+	position:absolute;
+	left:0;
+	top:0;
+}
+.grid ul li.grid .list1 > div:hover .type > div img {
+	top:-60px;
+}
+.grid .list1 > div .type p {
+	color:#ffffff;
+	font-size:14px;
+	line-height:18px;
+	padding:6px 10px;
+	margin:1px 0 0;
+	background:rgb(0,0,0);
+	background:rgba(0,0,0,0.7);
+}
+.grid .list1 .information {
+	float:left;
+	width:280px;
+	margin:21px 0 20px 40px;
+}
+.grid .list1 .information h4 {
+	color:#00ae5d;
+	font-size:24px;
+	line-height:34px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 10px;
+}
+.grid .list1 > div:hover .information h4 {
+	color:#e88e00;
+}
+.grid .list1 .information p {
+	font-size:16px;
+	line-height:26px;
+	margin:0;
+}
+.grid .list1 .more {
+	float:right;
+	width:200px;
+	margin:26px 40px 0 0;
+}
+.grid .list1 .more .price {
+	font-size:20px;
+	line-height:30px;
+	font-weight:500;
+	padding:0;
+	margin:0 0 12px;
+}
+.grid .list1 .more .order {
+	width:280px;
+	color:#00ae5d;
+	font-size:14px;
+	line-height:22px;
+	font-weight:bold;
+	text-align:left;
+	text-transform:uppercase;
+	cursor:pointer;
+	padding:14px 40px 14px;
+	margin:0 0 22px -40px;
+	background:#3d3d3d;
+	border:0;
+}
+.grid .list1 .more .phone {
+	margin:0 0 10px;
+}
+.grid .list1 .more .phone h5 {
+	font-size:20px;
+	line-height:30px;
+	font-weight:500;
+	padding:0;
+	margin:0 0 -1px;
+}
+.grid .list1 .more .phone p {
+	font-size:16px;
+	line-height:26px;
+	margin:0;
+}
+.grid .list1 .more .phone p span {
+	color:#00ae5d;
+	text-decoration:none;
+	cursor:pointer;
+	transition:color 0.1s ease-in-out;
+	-webkit-transition:color 0.1s ease-in-out;
+	-moz-transition:color 0.1s ease-in-out;
+	-o-transition:color 0.1s ease-in-out;
+}
+.grid .list1 .more .phone p span:hover {
+	color:#e88e00;
+	text-decoration:none;
+}
+
+.grid .list2 {
+	text-align:left;
+	margin:0;
+}
+.grid .list2 > div {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	cursor:pointer;
+	margin:0 0 20px;
+	background:#ffffff;
+	transition:box-shadow 0.1s ease-in-out;
+	-webkit-transition:box-shadow 0.1s ease-in-out;
+	-moz-transition:box-shadow 0.1s ease-in-out;
+	-o-transition:box-shadow 0.1s ease-in-out;
+}
+.grid .list2 > div:hover {
+	-webkit-box-shadow:0 1px 5px rgba(0,0,0,0.35);
+	-moz-box-shadow:0 1px 5px rgba(0,0,0,0.35);
+	box-shadow:0 1px 5px rgba(0,0,0,0.35);
+}
+.grid .list2 > div .photo {
+	overflow:hidden;
+	position:relative;
+	float:left;
+	width:200px;
+	height:150px;
+}
+.grid .list2 > div .photo img {
+	position:absolute;
+	left:0;
+	top:0;
+	width:200px;
+	height:150px;
+}
+.grid .list2 > div .type {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:5;
+	width:60px;
+}
+.grid .list2 > div .type > div {
+	overflow:hidden;
+	position:relative;
+	width:60px;
+	height:60px;
+	background:rgb(0,0,0);
+	background:rgba(0,0,0,0.7);
+}
+.grid .list2 > div .type > div img {
+	position:absolute;
+	left:0;
+	top:0;
+}
+.grid ul li.grid .list2 > div:hover .type > div img {
+	top:-60px;
+}
+.grid .list2 > div .type p {
+	color:#ffffff;
+	font-size:14px;
+	line-height:18px;
+	padding:6px 10px;
+	margin:1px 0 0;
+	background:rgb(0,0,0);
+	background:rgba(0,0,0,0.7);
+}
+.grid .list2 .information {
+	float:left;
+	width:500px;
+	margin:21px 0 0 40px;
+}
+.grid .list2 .information h4 {
+	color:#00ae5d;
+	font-size:24px;
+	line-height:34px;
+	font-weight:normal;
+	padding:0;
+	margin:0 0 9px;
+}
+.grid .list2 > div:hover .information h4 {
+	color:#e88e00;
+}
+.grid .list2 .information p {
+	font-size:14px;
+	line-height:26px;
+	margin:0;
+}
+.grid .list2 .information > div {
+	clear:both;
+	overflow:hidden;
+	width:500px;
+	margin:0;
+}
+.grid .list2 .information > div > div {
+	float:left;
+	margin:0 0 0 40px;
+}
+.grid .list2 .information > div > div:first-child {
+	margin-left:0;
+}
+.grid .list2 .more {
+	float:right;
+	width:160px;
+	margin:25px 20px 0 0;
+}
+.grid .list2 .more .price {
+	font-size:20px;
+	line-height:30px;
+	font-weight:500;
+	padding:0;
+	margin:0 0 9px;
+}
+.grid .list2 .more button.order {
+	width:auto;
+	font-size:14px;
+	line-height:18px;
+	white-space:nowrap;
+	padding:11px 23px;
+	margin:0 0 0 -25px;
 }

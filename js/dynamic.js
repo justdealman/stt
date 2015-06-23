@@ -14,7 +14,7 @@
 			$('footer .list .temp p:nth-of-type('+eval((i-1)*Math.ceil(elements/cols)+j)+')').clone().appendTo($('footer .list ul li:nth-of-type('+i+')'));
 		}
 	}
-	$('.clear').css({
+	$('div.clear').css({
 		'height': $('footer').outerHeight()+'px'
 	});
 	$('footer').css({
@@ -87,9 +87,9 @@ $(document).ready(function() {
 	});
 	if ( $('.grid').length > 0 ) {
 		$('.grid .card').append('<span class="close"></span>');
-		$('.grid ul li').bind('click', function() {
+		$('.grid [data-card]').bind('click', function() {
 			var target = $(this).attr('data-card');
-			$('.grid ul li').css({
+			$('.grid ul li, .grid .list1 > div, .grid .list2 > div').css({
 				'margin-bottom': '20px'
 			}, 200);
 			$('.grid .card').hide();
@@ -101,7 +101,7 @@ $(document).ready(function() {
 			}).show();
 			$('html, body').animate({
 				scrollTop: $('.grid .card[data-element="'+target+'"]').offset().top-($(window).height()-$('.grid .card[data-element="'+target+'"]').outerHeight())/2+'px'
-			}, 200);
+			}, 0);
 		});
 		$('.grid .card .close').bind('click', function() {
 			$(this).parent().hide();
@@ -127,6 +127,83 @@ $(document).ready(function() {
 			});
 		}
 	});
+	if ( $('.filter').length > 0 ) {
+		$('.title .filter > ul > li > div').each(function() {
+			var c = $(this);
+			c.find('h6.min').text(eval(c.attr('data-min')));
+			c.find('h6.max').text(eval(c.attr('data-max')));
+			c.find('input.from').val(eval(c.attr('data-from')));
+			c.find('input.to').val(eval(c.attr('data-to')));
+			c.find('.range-slider > div').slider({
+				range: true,
+				min: eval(c.attr('data-min')),
+				max: eval(c.attr('data-max')),
+				step: eval(c.attr('data-step')),
+				values: [ eval(c.attr('data-from')), eval(c.attr('data-to')) ],
+				slide: function(event, ui) {
+					c.find('input.from').val(ui.values[0]);
+					c.find('input.to').val(ui.values[1]);
+				}
+			});
+			c.find('input.from').change(function() {
+				if ( $(this).val() <= c.find('.range-slider > div').slider('option', 'min') ) {
+					$(this).val(c.find('.range-slider > div').slider('option', 'min'));
+				}
+				if ( $(this).val() >= c.find('.range-slider > div').slider('values', 1) ) {
+					$(this).val(c.find('.range-slider > div').slider('values', 1));
+				}
+				c.find('.range-slider > div').slider('values', 0, $(this).val());
+			});
+			c.find('input.to').change(function() {
+				if ( $(this).val() >= c.find('.range-slider > div').slider('option', 'max') ) {
+					$(this).val(c.find('.range-slider > div').slider('option', 'max'));
+				}
+				if ( $(this).val() <= c.find('.range-slider > div').slider('values', 0) ) {
+					$(this).val(c.find('.range-slider > div').slider('values', 0));
+				}
+				c.find('.range-slider > div').slider('values', 1, $(this).val());
+			});
+		})
+		$('.title .filter > ul > li > span').bind('click', function() {
+			if ( $('.title .filter > ul > li.active').length > 0 ) {	
+				$('.title .filter > ul > li').removeClass('active');
+			}
+			if ( $(this).parent('.active').length > 0 ) {
+				$(this).parent().removeClass('active');
+			}
+			else {
+				$(this).parent().addClass('active');
+			}
+		});
+		$('html').click(function() {
+			$('.title .filter > ul > li').removeClass('active');
+		});
+		$('.title .filter > ul > li > span, .title .filter > ul > li > div').click(function(event){
+			event.stopPropagation();
+		});
+		$('.title .sort .view ul li').bind('click', function() {
+			$(this).addClass('active').siblings().removeClass('active');
+		}).filter(':first').click();
+		$('.title .sort .order ul li').bind('click', function() {
+			$(this).addClass('active').siblings().removeClass();
+			if ( !$(this).hasClass('down') && !$(this).hasClass('up') ) {
+				$(this).addClass('down');
+			}
+			else {
+				if ( $(this).hasClass('down') ) {
+					$(this).addClass('up').removeClass('down');
+				}
+				else {
+					$(this).addClass('down').removeClass('up');
+				}
+			}
+		}).filter(':first').click();
+	}
+	$('.phone.hidden p span').bind('click', function(event) {
+		var target = $(this).parents('.phone').find('h5');
+		target.text(target.attr('data-phone'));
+		event.stopPropagation();
+	})
 });
 $(window).resize(function() {
 	footerList();
